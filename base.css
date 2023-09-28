@@ -1,0 +1,284 @@
+:root {
+    --gap: 0.1rem;
+    --duration: 2000s;
+    --scroll-start:-100%;
+    --scroll-end:calc(-200% - var(--gap));
+ 
+}
+@font-face{
+    font-family: PPMondwest;
+    src: url(fonts/PPMondwest-Regular.otf);
+
+}
+
+@font-face {
+    font-family: PPNeueMachina;
+    src: url(fonts/PPNeueMachina-PlainRegular.otf);
+}
+
+
+html{
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(255, 252, 252);
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.main-container{
+    width: 100%;
+}
+
+.footer-wrapper{
+    margin-top: 10px;
+}
+
+.footer-container{
+    height: 100px;
+}
+
+.archive{
+        color: black;
+        display: flex;
+        gap: var(--gap);
+        margin-top: 50px;
+         font-size: 20px;
+         text-transform: uppercase;
+         white-space: nowrap;
+
+}
+
+.head-title {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: PPNeueMachina;
+    
+
+}
+
+.head-title:hover{
+    text-decoration: underline;
+    color: rgb(60, 255, 0);
+}
+
+
+.headlink {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+
+
+.headlink:hover{
+    text-decoration: underline;
+    color: rgb(60, 255, 0);
+}
+
+
+
+.content-container{
+    padding-left: 1.3rem;    
+    padding-right: 1.3rem;    
+    padding-bottom: 1,3rem;
+    min-height: 100vh;
+  
+
+}
+
+.header-bar{
+    font-family: PPNeueMachina;
+}
+
+.footer-bar{
+    font-family: PPNeueMachina;
+    font-size: 15px;
+    display: flex;
+    justify-content:left;
+    flex-direction: column;
+    
+}
+
+.footer-text{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+hr{
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    border: 0;
+    height: 0.5rem;
+    display: block;
+    margin-top: 0.3rem;
+    margin-bottom: 1.3rem;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    z-index: 1;
+
+}
+
+.title-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marquee-wrapper{
+margin: auto;
+max-width: 100vh;
+vertical-align: middle;
+height: 120px;
+
+
+}
+
+
+.marquee-wrapper:hover{
+    margin: auto;
+    max-width: 100vh;
+    vertical-align: middle;
+    height: 120px;
+    color: rgb(0, 255, 0);
+    
+    }
+
+.marquee1{
+display: flex;
+gap: var(--gap);
+ font-size: 100px;
+ text-transform: uppercase;
+ white-space: nowrap;
+ 
+
+}
+
+
+.marquee1:hover{
+    display: flex;
+    gap: var(--gap);
+     font-size: 100px;
+     text-transform: uppercase;
+     white-space: nowrap;
+     color: rgb(0, 255, 0);
+    
+    }
+    
+    
+
+.marquee2{
+    display: flex;
+    gap: var(--gap);
+     font-size: 10px;
+     text-transform: uppercase;
+     white-space: nowrap;
+     
+    
+    }
+    
+
+
+.marquee-group{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    animation: scroll-left 20000ms linear infinite;
+}
+
+
+.marquee-tag-wrapper{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 110px;
+    font-family: PPNeueMachina;
+    align-content: center;
+    height: 110px;
+    margin-top: 10px;
+
+}
+
+
+.marquee-tag-container{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.marquee-tag{
+    align-content: center;
+}
+
+
+.marquee-tag-icon{
+
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 125px;
+
+}
+
+.menu-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.icons{
+    width: 20px;
+}
+
+
+
+.content-wrap{
+    display: flex;
+    justify-content: row;
+
+}
+
+.left-side{
+    display: 1fr;
+}
+
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(var(--scroll-start));
+    }
+    to {
+        transform: translateX(var(--scroll-end));
+    }
+    }
+
+
+
+
+@media only screen and (max-width: 768px){
+
+    .marquee-wrapper{
+        margin: auto;
+        max-width: 100vh;
+        vertical-align: middle;
+        
+        
+        }
+
+        .marquee-tag-wrapper{
+
+            font-size: 400px;
+
+        
+        }
+        
+}
